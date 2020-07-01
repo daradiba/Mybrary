@@ -7,4 +7,14 @@
 <br>
 <% authors.forEach(author => { %>
     <div><%= author.name %> </div>
+    <a href="/authors/<%= author.id %>">View</a>
+    <a href="/authors/<%= author.id %>/edit">Edit</a>
+    <!-- We use "String interpretation" using backquotes (backtick) and ${} syntax -->
+    <!-- because the code inside lessthanpercentdash is running on server where the syntax -->
+    <!-- lessthanpercentequal cannot be interpreted and we need the value of variable author.id -->
+    <%- include('../partials/deleteForm', {url: `/authors/${author.id}`}) %> 
+    <!-- Not necessary anymore, since we use "include" -->
+    <!-- <form method="POST" action="/authors/<%= author.id %>?_method=DELETE">
+        <button type="submit">Delete</button>
+    </form> -->
 <% }) %> 
