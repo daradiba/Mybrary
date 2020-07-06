@@ -61,6 +61,6 @@ bookSchema.virtual('coverImagePath').get(function() {
 })
 
 // Export the Schema as a Model
-// 'Author' is the name of the "Table"
+// 'Book' is the name of the "Table"
 module.exports = mongoose.model('Book', bookSchema)
 // module.exports.coverImageBasePath = coverImageBasePath
