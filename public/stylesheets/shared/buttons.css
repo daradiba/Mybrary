@@ -26,7 +26,7 @@
     align-items: flex-start;
 }
 
-/* We gonna select every single child of that button, so essentially all our different buttons */
+/* We're gonna select every single child of that button, so essentially all our different buttons */
 .btn-row > * {
     margin-left: 1rem;
 }
